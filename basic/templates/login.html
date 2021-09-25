@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <form action="{% url 'user_page' %}" method="POST">
+
+        {% csrf_token %}
+        <br><input type="email" required placeholder="Email" name="Email">
+        <br><input type="password" required placeholder="Пароль" name="Password">
+        <br><button type="submit">Войти</button>
+    </form>
+{% endblock %}

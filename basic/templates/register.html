@@ -5,13 +5,15 @@
 
 {% block content %}
 
-    <form action="{% url 'users:registration form' %}" method="POST">
+    <form action="{% url 'users:registration_form' %}" method="POST">
 
         {% csrf_token %}
-        <input type="text" required placeholder="Ваше имя" name="FirstName">
-        <input type="text" required placeholder="Ваша Фамилия" name="LastName">
-        <input type="text" required placeholder="Ваш Адрес" name="Address">
-        <input type="text" required placeholder="Номер телефона" name="Mobile">
-        <button type="submit">Зарегистрироваться</button>
+        <br><input type="text" required placeholder="Ваше имя" name="FirstName">
+        <br><input type="text" required placeholder="Ваша Фамилия" name="LastName">
+        <br><input type="text" required placeholder="Ваш Адрес" name="Address">
+        <br><input type="text" required placeholder="Номер телефона" name="Mobile">
+        <br><input type="email" required placeholder="Email" name="Email">
+        <br><input type="password" required placeholder="Пароль" name="Password">
+        <br><button type="submit">Зарегистрироваться</button>
     </form>
 {% endblock %}
