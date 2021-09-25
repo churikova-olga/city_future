@@ -9,5 +9,7 @@ class UserProfile(models.Model):
     address = models.CharField('Your Address', max_length=300)
     mobile = models.CharField('Mobile Number', max_length=50, blank=False)
     rating = models.IntegerField('User Rating', default=0)
+    password = models.CharField('Password ', max_length=100)
+    email = models.CharField('Email', max_length=100, unique=True)
 
 # class Achievement
