@@ -3,6 +3,7 @@ Django==3.2.7
 pytz==2021.1
 sqlparse==0.4.2
 sklearn
-contractions
+contractions==0.0.18
 nltk
 pandas
+django-crispy-forms==1.12.0
