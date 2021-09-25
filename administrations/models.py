@@ -13,3 +13,4 @@ class AdministrationProfile(models.Model):
     address = models.CharField('Address', max_length=100)
     city = models.CharField('city', max_length=100)
 
+# class Achievement
