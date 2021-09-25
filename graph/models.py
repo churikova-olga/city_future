@@ -15,6 +15,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.manifold import TSNE
 
 
+COMPARING_LIMIT = 0.05
+
 class Graph:
 
     def __init__(self):
@@ -28,11 +30,11 @@ class Graph:
     Обновить граф путём загрузки новых инициатив из базы данных.
     """
     def update(self):
-        self.df = pd.DataFrame(list(Initiative.objects.all().values('name', 'description', 'address',
+        self.df = pd.DataFrame(list(Initiative.objects.all().values('id', 'name', 'description', 'address',
                                                                     'pub_date', 'category_name')))
 
         ### Пункт 1: забьём на дату и адрес (и категорию?). Сконцентрируемся на имени и описании
-        self.df = self.df[['name', 'description']]
+        self.df = self.df[['id', 'name', 'description']]
 
         self.df['nlp_data'] = self.df['name'] + '. ' + self.df['description']
         self.df.drop('description', inplace=True, axis=1)
@@ -78,18 +80,26 @@ class Graph:
         self.update()
         tfidf_matrix = self.tfidf()
         doc_sim = cosine_similarity(tfidf_matrix)
-        doc_sim_df = pd.DataFrame(doc_sim, columns=self.df['name'].values, index=self.df['name'].values)
+        doc_sim_df = pd.DataFrame(doc_sim, columns=self.df['id'].values, index=self.df['id'].values)
 
         return doc_sim_df
 
-    def draw_tsne(self):
-
-        X = self.tfidf()
-        X_embedded = TSNE(n_components=2, learning_rate='auto', init='random').fit_transform(X)
-
-        f = plt.figure(figsize=(15,15))
-        plt.scatter(X_embedded[:, 0], X_embedded[:, 1])
-        plt.show()
+    def graph_dict(self):
+        doc_sim_df = self.get_similarities_matrix()
+        res = dict()
+        for i in self.df['id'].values:
+            res[i]=[]
+            for j in self.df['id'].values[i:]:
+                if doc_sim_df[i][j] > COMPARING_LIMIT:
+                    if i in res.keys():
+                        res[i].append(j)
+                    else:
+                        res[i] = [j]
+                    if j in res.keys():
+                        res[j].append(i)
+                    else:
+                        res[j] = [i]
+        return res
 
 
 if __name__ == '__main__':
