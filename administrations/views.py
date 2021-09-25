@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import AdministrationProfile
+from initiatives.models import Initiative
 # Create your views here.
 
 
@@ -26,3 +27,22 @@ def administration(request):
         return HttpResponse(f'Hello, {AdministrationProfile.objects.get(email=res["Email"]).role}!')   # redirect
     else:
         return HttpResponse('Пользователь не найден!')
+
+def sort_rating(request):
+    list_initiative = Initiative.objects.order_by('-rating')
+    return render(request, 'list.html', {'list_initiative': list_initiative})
+
+def change_status(request):
+
+    #Initiative.objects.get(id=1).status //= "Принята"
+
+    pass
+
+
+
+# def detail(request, initiative_id):
+#     try:
+#         a = Initiative.object.get(id = initiative_id)
+#     except:
+#
+

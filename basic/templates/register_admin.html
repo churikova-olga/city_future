@@ -8,14 +8,14 @@
     <form action="{% url 'administrations:admin form' %}" method="POST" align="center">
 
         {% csrf_token %}
-        <input type="text" required placeholder="Ваше имя" name="FirstName"><br><br>
-        <input type="text" required placeholder="Ваша Фамилия" name="LastName"><br<br>>
-        <input type="text" required placeholder="Ваша должность" name="Role"><br><br>
-        <input type="text" required placeholder="Название оргагнизации" name="Organization"><br><br>
-        <input type="text" required placeholder="Город" name="City"><br><br>
-        <input type="text" required placeholder="Адрес организации" name="Address"><br><br>
-        <input type="text" required placeholder="email" name="Email"><br><br>
-        <input type="text" required placeholder="Ваш пароль" name="Password"><br><br>
+        <input type="text" required placeholder="Ваше имя" name="FirstName"> <br><br>
+        <input type="text" required placeholder="Ваша Фамилия" name="LastName"> <br><br>
+        <input type="text" required placeholder="Ваша должность" name="Role"> <br><br>
+        <input type="text" required placeholder="Название оргагнизации" name="Organization"> <br><br>
+        <input type="text" required placeholder="Город" name="City"> <br><br>
+        <input type="text" required placeholder="Адрес организации" name="Address"> <br><br>
+        <input type="text" required placeholder="email" name="Email"> <br><br>
+        <input type="text" required placeholder="Ваш пароль" name="Password"> <br><br>
 
         <button type="submit">Зарегистрироваться</button>
     </form>

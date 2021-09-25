@@ -22,6 +22,7 @@ import users
 urlpatterns = [
     path('initiatives/', include('initiatives.urls')),
     path('register/', include('users.urls')),
+    path('list_index/', include('initiatives.urls')),
     path('register_admin/', include('administrations.urls')),
     path('login/', users.views.login_page, name='login_page'),
     path('page/', users.views.user, name='user_page'),

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if list_initiative %}
+    {% for a in list_initiative %}
+        <a  href = "{%url 'index'%}"> {{a.name}}, {{a.rating}} <br><br></a>
+
+    {% endfor %}
+{% else %}
+    Инициативы не найдены
+{% endif %}
+
+{% endblock %}
