@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+</head>
+<body>
+    <header>
+		<section>
+            <div class="logo_block">
+                <div class="logo ">
+                    <a href=""><img  src="{% static 'img/logo.png' %}"></a>
+                </div>
+                <nav class="menu_standart ">
+                    <ul class="menu_ul ">
+                        <li class="menu_li active"><a href="/">Создать инициативу</a></li>
+                        <li class="menu_li"><a href="search">Найти инициативу</a></li>
+                        <li class="menu_li"><a href="">Карта города</a></li>
+                        <li class="menu_li"><a href="">Для органов власти</a></li>
+                        <li class="menu_li "><a href="">О проекте</a></li>
+                        <li class="menu_li last_el"><a href="">Помощь</a></li>
+                    </ul>
+                    <div class="signin">
+                         <a href="">Вход</a>
+                    </div>
+                </nav>
+            </div>
+		</section>
+	</header>
+    <main>
+        <div class="header_bg"></div>
+
+
+    </main>
+    <footer>
+    <section class="container">
+            <div class="row">
+                <div class="col-10">
+                    <div class="footer_block">
+                         <ul class="footer_ul">
+                            <li class="footer_ul"><a href="">Обратная связь</a></li>
+                            <li class="footer_ul"><a href="">Часто задаваемые вопросы</a></li>
+                            <li class="footer_ul"><a href="">Для прессы</a></li>
+                            <li class="footer_ul"><a href="">Сообщить о проблеме</a></li>
+                        </ul>
+                     </div>
+                    <div class="footer_block_img_left">
+                        <a href=""><img src="{% static 'img/gp.svg' %}" alt=""></a>
+                        <a href=""><img src="{% static 'img/as.svg' %}" alt=""></a>
+                    </div>
+                <div class="footer_p">
+                    <p>© 2021, Город Будущего. Все права защищены. Условия участия в проекте «Город Будущего». Соглашение о пользовании информационными системами и ресурсами сайта.</p>
+                </div>
+                </div>
+                <div class="col-2 footer_img_block">
+                    <a href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
+                    <a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                    <a href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
+                </div>
+            </div>
+        </section>
+  </footer>
+</body>
+</html>
+

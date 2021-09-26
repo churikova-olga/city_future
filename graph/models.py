@@ -4,18 +4,16 @@ from django.db import models
 from initiatives.models import Initiative
 
 import contractions
-import nltk
-import matplotlib.pyplot as plt                         # добавить в реквайрментс?
+import nltk                        # добавить в реквайрментс?
 import re
 import numpy as np
 import pandas as pd
 from datetime import datetime                           # для преобразования даты в строку, если надо?
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.manifold import TSNE
 
 
-COMPARING_LIMIT = 0.05
+COMPARING_LIMIT = 0.03
 
 class Graph:
 
@@ -31,13 +29,12 @@ class Graph:
     """
     def update(self):
         self.df = pd.DataFrame(list(Initiative.objects.all().values('id', 'name', 'description', 'address',
-                                                                    'pub_date', 'category_name')))
+                                                                    'pub_date', 'category_name', 'rating')))
 
         ### Пункт 1: забьём на дату и адрес (и категорию?). Сконцентрируемся на имени и описании
-        self.df = self.df[['id', 'name', 'description']]
+        self.df = self.df[['id', 'name', 'description', 'category_name', 'rating']]
 
-        self.df['nlp_data'] = self.df['name'] + '. ' + self.df['description']
-        self.df.drop('description', inplace=True, axis=1)
+        self.df['nlp_data'] = self.df['name'] + '. ' + self.df['description'] + '. ' + self.df['category_name']
 
 
     """
@@ -84,24 +81,44 @@ class Graph:
 
         return doc_sim_df
 
-    def graph_dict(self):
+    def graph_dict(self, conditions=None):  #допилить и в дальнейшем подправить систему фильтрации
         doc_sim_df = self.get_similarities_matrix()
-        res = dict()
-        for i in self.df['id'].values:
-            res[i]=[]
-            for j in self.df['id'].values[i:]:
-                if doc_sim_df[i][j] > COMPARING_LIMIT:
-                    if i in res.keys():
-                        res[i].append(j)
-                    else:
-                        res[i] = [j]
-                    if j in res.keys():
-                        res[j].append(i)
-                    else:
-                        res[j] = [i]
+        nodes = []
+        edges = []
+        nodes_id = []
+        for n in doc_sim_df.columns:
+            if self.check_conditions(n, conditions):
+                d = {
+                    "font": {"color": "white"},
+                    "id": n,
+                    "label": self.df.loc[self.df['id'] == n].iat[0,1].replace('\n', ''),
+                    "shape": "dot",
+                    "title": self.df.loc[self.df['id'] == n].iat[0,2].replace('\r\n', '\u003cbr\u003e'),
+                    "value": self.df.loc[self.df['id'] == n].iat[0,4] * 10 + 100
+                }
+                nodes.append(d)
+                nodes_id.append(n)
+
+        for node in nodes:
+            for n in doc_sim_df.columns:
+                if (n in nodes_id) and (doc_sim_df[node['id']][n] > COMPARING_LIMIT) and (node['id'] != n):
+                    e = {
+                        "from": node['id'],
+                        "to": n,
+                        "value": int(doc_sim_df[node['id']][n]*100)
+                    }
+                    edges.append(e)
+        return nodes, edges
+
+    def check_conditions(self, n, conditions: dict):   # Сделать фильтры для сравнения ">" или "<"
+        res = True
+        if conditions:
+            for field, val in conditions.items():
+                if self.df.loc[self.df['id'] == n].iloc[0][field] != val:
+                    res = False
+                    break
         return res
 
 
-if __name__ == '__main__':
-    a = Graph()
-    a.update()
+
+
