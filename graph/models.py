@@ -29,7 +29,8 @@ class Graph:
     """
     def update(self):
         self.df = pd.DataFrame(list(Initiative.objects.all().values('id', 'name', 'description', 'address',
-                                                                    'pub_date', 'category_name', 'rating')))
+                                                                    'pub_date', 'category_name', 'rating')),
+                               columns=['id', 'name', 'description', 'address', 'pub_date', 'category_name', 'rating'])
 
         ### Пункт 1: забьём на дату и адрес (и категорию?). Сконцентрируемся на имени и описании
         self.df = self.df[['id', 'name', 'description', 'category_name', 'rating']]
@@ -82,7 +83,10 @@ class Graph:
         return doc_sim_df
 
     def graph_dict(self, conditions=None):  #допилить и в дальнейшем подправить систему фильтрации
-        doc_sim_df = self.get_similarities_matrix()
+        try:
+            doc_sim_df = self.get_similarities_matrix()
+        except ValueError:
+            return {}, {}
         nodes = []
         edges = []
         nodes_id = []
