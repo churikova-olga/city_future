@@ -5,4 +5,4 @@ from .models import UserProfile, Answer, Question
 
 admin.site.register(UserProfile)
 admin.site.register(Question)
-admin.site.register(Answer)
+admin.site.register(Answer) # ответы
