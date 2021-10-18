@@ -4,5 +4,5 @@ from django.contrib import admin
 from .models import UserProfile, Answer, Question
 
 admin.site.register(UserProfile)
-admin.site.register(Question) # вопросы
+admin.site.register(Question) #вопросы
 admin.site.register(Answer)
