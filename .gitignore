@@ -14,3 +14,8 @@ media
 /venv
 /static
 /.idea
+/users/migrations/
+/main/migrations/
+/initiatives/migrations/
+/graph/migrations/
+/administrations/migrations/
