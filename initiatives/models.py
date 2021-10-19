@@ -2,7 +2,7 @@ from django.db import models
 
 from django.utils import timezone
 # Create your models here.
-from administrations.models import AdministrationProfile
+# from administrations.models import AdministrationProfile
 from users.models import UserProfile
 
 
@@ -24,9 +24,9 @@ class Initiative(models.Model):
 class Comment(models.Model):
     initiative_comment = models.ForeignKey(Initiative, on_delete=models.CASCADE)
     user_comment = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    administration_comment = models.ForeignKey(AdministrationProfile, on_delete=models.CASCADE, blank=True, null=True)
+    # administration_comment = models.ForeignKey(AdministrationProfile, on_delete=models.CASCADE, blank=True, null=True)
     date_comment = models.DateTimeField('PublicationDate')
-    message = models.TextField('Message')
+    message_comment = models.TextField('Message')
 
 
 
