@@ -88,6 +88,36 @@ ul li{
     left: 230px;
     top: 240px;
 }
+                                     /*Slider*/
+.slider_ini{
+
+}
+
+/*Стили для слайдеров: Акции и Популярное и Баннера*/
+.jssorb131 {position:absolute;}
+.jssorb131 .i {position:absolute;cursor:pointer;}
+.jssorb131 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:2000;stroke-miterlimit:10;stroke-opacity:0.7;}
+.jssorb131 .i:hover .b {fill:#fff;fill-opacity:.5;stroke:#000;stroke-width:2000;stroke-opacity:0.7;}
+.jssorb131 .iav .b {fill:#fff;stroke:#000;stroke-width:2000;fill-opacity:1;stroke-opacity:1;}
+.jssorb131 .i.idn {opacity:0.3;}
+
+/*jssor slider arrow skin 111 css*/
+.jssora111 {display:block;position:absolute;cursor:pointer;}
+.jssora111 .a {fill:#ddd;fill-opacity:.7;stroke:#000;stroke-width:160;stroke-miterlimit:10;stroke-opacity:.3;}
+.jssora111:hover {opacity:.8;}
+.jssora111.jssora111dn {opacity:.4;}
+.jssora111.jssora111ds {opacity:.3;pointer-events:none;}
+
+
+/*jssor slider arrow skin 103 css*/
+.jssora103 {display:block;position:absolute;cursor:pointer;}
+.jssora103 .c {fill:#fff;opacity:.8;}
+.jssora103 .a {fill:#333;opacity:.8;}
+.jssora103:hover .c {opacity:.6;}
+.jssora103:hover .a {opacity:1;}
+.jssora103.jssora103dn .c {opacity:.3;}
+.jssora103.jssora103dn .a {opacity:1;}
+.jssora103.jssora103ds {opacity:.3;pointer-events:none;}
                                     /*Numbers*/
 .number_block{
     height:200px;
