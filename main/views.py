@@ -17,3 +17,5 @@ def create(request):
 
 def second_part(request):
     return render(request, 'main/second_part.html')
+
+
