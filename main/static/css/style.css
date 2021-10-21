@@ -17,7 +17,7 @@ a {
 	outline: none;
 }
 header{
-	height: 120px;
+	height: 160px;
 	position: absolute;
 }
 footer{
@@ -27,64 +27,32 @@ ul li{
     list-style: none;
 }
                                         /*Header*/
-.menu_standart{
-	float: left;
-	margin-top: 42px;
-	position: fixed;
-	right: 100px;
-}
-.menu_ul{
-	line-height: 35px;
-	float: left;
-	margin-left: 20px;
-}
 .menu_li{
-	display: inline-block;
-	margin-right: 15px;
-	font-size: 21px;
+	font-size: 18px;
 	font-weight: 400;
 }
 .menu_li a:hover{
-	color: #B18AFF;
+	color: #B18AFF !important;
 }
 .logo{
 	float: left;
 	padding-top: 10px;
+	padding-left: 20px;
 }
 .logo img{
     height: 94px;
 }
-.logo_block{
-    padding-top: 20px;
-    float: left;
-    position: fixed;
-	left: 100px;
-}
-.logo_block a:first-child{
-    color: white;
-}
-.logo_block a{
-	color: #D2D2D2;
-}
-.signin{
-	line-height: 35px;
-	float: left;
-}
+
 .signin a{
-	color: #D2D2D2;;
+	color: #D2D2D2;
 	text-decoration: none;
-	font-size: 21px;
+	font-size: 18px;
 }
 .signin a:hover{
 	color: #D2D2D2;
-	text-decoration: underline;
-}
-.last_el{
-    padding-right: 30px;
 }
 .active{
      background-color: #B18AFF;
-     padding: 0px 12px 3px 12px;
      border-radius: 20px;
 }
 .header_bg{
@@ -116,8 +84,8 @@ ul li{
    font-weight: 500;
 }
 .content_banner{
-    position: absolute;
-    left: 106px;
+    position: ;
+    left: 230px;
     top: 240px;
 }
                                     /*Numbers*/
