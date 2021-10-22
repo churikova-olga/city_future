@@ -42,6 +42,7 @@ def login(request):
     context = {'form': form}
     return render(request, 'login.html', context)
 
+
 def register(request):
     if request.method == "POST":
         form = UserRegistrationForm(data=request.POST)
