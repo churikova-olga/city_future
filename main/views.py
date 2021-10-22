@@ -19,3 +19,15 @@ def second_part(request):
     return render(request, 'main/second_part.html')
 
 
+def about(request):
+    return render(request, 'main/about.html')
+
+
+def government(request):
+    return render(request, 'main/government.html')
+
+
+def faq(request):
+    return render(request, 'main/faq.html')
+
+

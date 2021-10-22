@@ -90,10 +90,10 @@ ul li{
 }
                                      /*Slider*/
 .slider_ini{
-
+    background-image: url("/main/static/img/background.svg");
 }
 
-/*Стили для слайдеров: Акции и Популярное и Баннера*/
+/*Стили для слайдеров:*/
 .jssorb131 {position:absolute;}
 .jssorb131 .i {position:absolute;cursor:pointer;}
 .jssorb131 .i .b {fill:#000;fill-opacity:0.6;stroke:#fff;stroke-width:2000;stroke-miterlimit:10;stroke-opacity:0.7;}
@@ -341,5 +341,19 @@ footer{
             border-radius:72px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         }
+                                        /*About*/
+.about_content{
+}
+.about_content h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 84px;
+    line-height: 102px;
+}
+.about_content p{
+
+}
+
 
 
