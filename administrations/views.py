@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-# from .models import AdministrationProfile
+from django.views.generic import TemplateView
+
+from initiatives.models import Initiative
+from .models import Statistics
 # Create your views here.
 
 
@@ -8,16 +11,13 @@ from django.shortcuts import render
 #
 #     return render(request, 'register_admin.html')
 
-# def register_form_admin(request):
-#     res = request.POST
-#     AdministrationProfile.objects.create(first_name=res['FirstName'], last_name=res['LastName'],
-#                                          address=res['Address'], password=res['Password'], email=res['Email'],
-#                                          organization=res['Organization'], role=res['Role'], city=res['City'])
-#
-#     return HttpResponse(f'{AdministrationProfile.objects.get(email=res["Email"]).role} успешно зарегистрирован!')
-#
-# def login_page_admin(request):
-#     return render(request, 'login_admin.html')
+class statistics(TemplateView):
+
+    template_name = 'admin_statistics.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["qs"] = Initiative.objects.all()
+        return context
 #
 #
 # def administration(request):

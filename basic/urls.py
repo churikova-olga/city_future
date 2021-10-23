@@ -17,15 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 import users
 
-import administrations
-import users
 
 urlpatterns = [
     path('initiatives/', include('initiatives.urls')),
-    path('list_index/', include('initiatives.urls')),
-    path('users', include('users.urls')),
+    path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('statistics/', include('administrations.urls'))
     # path('page/', users.views.user, name='user_page'),
     # path('login_admin/', administrations.views.login_page_admin, name='login_page_admin'),
     # path('admin_page', administrations.views.administration, name='admin_page'),
