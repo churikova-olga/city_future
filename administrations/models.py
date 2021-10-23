@@ -1,4 +1,3 @@
-from django.db import models
 from initiatives.models import Initiative
 import datetime
 # Create your models here.
@@ -10,5 +9,5 @@ class Statistics:
         return Initiative.objects.filter(PublicationDate__level__gte=datetime.datetime.now()-timedur).count()
 
     # TODO: seaborn implement to show on the screen. Or mb
-
+    template_name = 'base/admin_statistics.html'
 # class Achievement
