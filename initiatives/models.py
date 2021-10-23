@@ -28,7 +28,7 @@ class Comment(models.Model):
     date_comment = models.DateTimeField('PublicationDate')
     message_comment = models.TextField('Message')
 
-class Rating(models.Model):
+class RatingInitiative(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     initiative = models.ForeignKey(Initiative, on_delete=models.CASCADE)
 
