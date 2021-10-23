@@ -32,3 +32,4 @@ urlpatterns = [
 # path('register_admin/', include('administrations.urls')),
 # path('login/', users.views.login_page, name='login_page'),
 # path('initiatives/', include('initiatives.urls')),
+]
