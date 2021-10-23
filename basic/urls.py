@@ -21,15 +21,14 @@ import administrations
 import users
 
 urlpatterns = [
-
     path('', include('initiatives.urls')),
     path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    # path('page/', users.views.user, name='user_page'),
-    # path('login_admin/', administrations.views.login_page_admin, name='login_page_admin'),
-    # path('admin_page', administrations.views.administration, name='admin_page'),
-    # path('register_admin/', include('administrations.urls')),
-    # path('login/', users.views.login_page, name='login_page'),
-    # #path('initiatives/', include('initiatives.urls')),
-]
+    path('statistics/', include('administrations.urls'))
+# path('page/', users.views.user, name='user_page'),
+# path('login_admin/', administrations.views.login_page_admin, name='login_page_admin'),
+# path('admin_page', administrations.views.administration, name='admin_page'),
+# path('register_admin/', include('administrations.urls')),
+# path('login/', users.views.login_page, name='login_page'),
+# path('initiatives/', include('initiatives.urls')),
