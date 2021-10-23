@@ -21,9 +21,9 @@ import administrations
 import users
 
 urlpatterns = [
-    path('initiatives/', include('initiatives.urls')),
-    path('list_index/', include('initiatives.urls')),
-    path('users', include('users.urls')),
+
+    path('', include('initiatives.urls')),
+    path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     # path('page/', users.views.user, name='user_page'),
@@ -31,4 +31,5 @@ urlpatterns = [
     # path('admin_page', administrations.views.administration, name='admin_page'),
     # path('register_admin/', include('administrations.urls')),
     # path('login/', users.views.login_page, name='login_page'),
+    # #path('initiatives/', include('initiatives.urls')),
 ]

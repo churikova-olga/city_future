@@ -2,13 +2,12 @@
 
 {% block content %}
 
-{% if list_initiative %}
-    {% for a in list_initiative %}
-        <a  href = "{%url 'index'%}"> {{a.name}}, {{a.rating}} <br><br></a>
+    <form action = "{% url 'initiatives:list_initiative' %}" method="POST" align="center">
 
-    {% endfor %}
-{% else %}
-    Инициативы не найдены
-{% endif %}
+        {% csrf_token %}
+        <h1>{{list_initiative.rating}}</h1> <br>
+        <button type="submit">проголосовать</button>
+
+    </form>
 
 {% endblock %}
