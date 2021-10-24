@@ -21,7 +21,7 @@ header{
 	position: absolute;
 }
 footer{
-	height: 390px;
+    height: 130px;
 }
 ul li{
     list-style: none;
@@ -30,9 +30,14 @@ ul li{
 .menu_li{
 	font-size: 18px;
 	font-weight: 400;
+	border-radius: 20px;
+}
+.menu_li a{
+    color: white !important;
 }
 .menu_li a:hover{
-	color: #B18AFF !important;
+	background-color: #B18AFF;
+    border-radius: 20px;
 }
 .logo{
 	float: left;
@@ -43,20 +48,21 @@ ul li{
     height: 94px;
 }
 
-.signin a{
-	color: #D2D2D2;
+.menu_a a{
+	color: white !important;
 	text-decoration: none;
 	font-size: 18px;
 }
-.signin a:hover{
-	color: #D2D2D2;
+.menu_a a:hover{
+	background-color: #B18AFF;
+    border-radius: 20px;
 }
-.active{
+. active{
      background-color: #B18AFF;
      border-radius: 20px;
 }
 .header_bg{
-    height: 160px;
+    height: 140px;
     background-color: #190033;
 }
                                             /*Banner*/
@@ -83,16 +89,32 @@ ul li{
    border-radius: 33px;
    font-weight: 500;
 }
+.btn_banner a:hover{
+    background-color: #190033;
+}
 .content_banner{
-    position: ;
-    left: 230px;
+    position: absolute;
+    left: 130px;
     top: 240px;
 }
                                      /*Slider*/
 .slider_ini{
-    background-image: url("/main/static/img/background.svg");
+    background-image: url("/main/static/img/back1.png");
+    color: white;
 }
-
+    .slider_ini h1{
+        padding-top: 50px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 100%;
+    }
+    .slider_ini p{
+        margin-top: 20px;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 22px;
+    }
 /*Стили для слайдеров:*/
 .jssorb131 {position:absolute;}
 .jssorb131 .i {position:absolute;cursor:pointer;}
@@ -169,10 +191,11 @@ footer{
 }
 .footer_img_block img{
     height: 55px;
-    margin-bottom: 15px;
+    margin-right: 20px;
+    margin-top: 30px;
 }
 .footer_p{
-    font-size: 24px;
+    font-size: 20px;
 }
 .footer_ul li{
     display: inline-block;
@@ -183,12 +206,16 @@ footer{
 .footer_ul{
     font-size: 24px;
     font-weight: 600;
+    padding: 0px !important;
 }
 .footer_ul li a{
     color: #4F4F4F;
+    padding: 4px 7px;
 }
 .footer_ul li a:hover{
-    color: #B18AFF;
+    color: white;
+    background: #101F4F;
+    border-radius: 20px;
 }
                                             /*Search_page*/
 .serch_int input{
@@ -197,7 +224,7 @@ footer{
     margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid grey;
-    color: white;
+    color: white !important;
     text-align: left !important;
 }
 .serch_int{
@@ -341,19 +368,30 @@ footer{
             border-radius:72px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         }
-                                        /*About*/
-.about_content{
+                                        /*About and Gavernment*/
+.about_content, .gavernment_content{
+    margin-top: 160px;
+    color: #101F4F;
 }
-.about_content h1{
+.about_content h1, .gavernment_content h1{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 84px;
+    font-size: 64px;
     line-height: 102px;
 }
-.about_content p{
-
+.about_content p, .gavernment_content p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
 }
+
+
+
+
+
 
 
 

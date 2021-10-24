@@ -7,10 +7,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    <script src="{% static 'jssor.slider-28.1.0.min.js' %}"></script>
+    <script src="{% static 'jquery-1.11.3.min.js' %}"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     {% block head %}{% endblock %}
@@ -18,28 +24,27 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-dark ">
-            <div class="container-fluid">
-                <div class="col-lg-1"></div>
-                <div class="col-sm-4 col-md-2 col-lg-2 col-xlg-2">
-                    <a class="logo navbar-brand" href=""><img  src="{% static 'img/logo.png' %}"></a>
+            <div class="container-fluid container">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4 col-md-2 col-lg-3 col-xlg-2">
+                    <a class="logo navbar-brand" href="/"><img  src="{% static 'img/logo.png' %}"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse main_menu col-8" id="navbarCollapse">
                     <ul class="navbar-nav  mb-2 mb-md-0">
                         <li class="menu_li active"><a class="nav-link" href="/">Создать инициативу</a></li>
                         <li class="menu_li"><a class="nav-link" href="search">Найти инициативу</a></li>
                         <li class="menu_li"><a class="nav-link" href="">Карта города</a></li>
                         <li class="menu_li"><a class="nav-link" href="government">Для органов власти</a></li>
                         <li class="menu_li "><a class="nav-link" href="about">О проекте</a></li>
-                        <li class="menu_li"><a class="nav-link" href="faq">Помощь</a></li>
                      </ul>
-                    <div class="d-flex col-sm-1">
-                        <a class="nav-link menu_li" href="">Вход</a>
-                        <a class="nav-link menu_li" href="">Регистрация</a>
-                    </div>
                  </div>
+                <div class="navbar-nav  menu_a">
+                    <a class="nav-link " href="">Вход</a>
+                    <a class="nav-link " href="">Регистрация</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -49,24 +54,25 @@
     <footer>
     <section class="container">
         <div class="row">
-            <div class="col-10">
+            <div class="col-9">
                 <div class="footer_block">
                      <ul class="footer_ul">
                         <li class="footer_ul"><a href="">Обратная связь</a></li>
-                        <li class="footer_ul"><a href="">Часто задаваемые вопросы</a></li>
-                        <li class="footer_ul"><a href="">Для прессы</a></li>
-                        <li class="footer_ul"><a href="">Сообщить о проблеме</a></li>
+                        <li class="footer_ul"><a href="faq">Помощь</a></li>
+
                     </ul>
                  </div>
+                <!--
                 <div class="footer_block_img_left">
                     <a href=""><img src="{% static 'img/gp.svg' %}" alt=""></a>
                     <a href=""><img src="{% static 'img/as.svg' %}" alt=""></a>
                 </div>
+                -->
                 <div class="footer_p">
                     <p>© 2021, Город Будущего. Все права защищены. Условия участия в проекте «Город Будущего». Соглашение о пользовании информационными системами и ресурсами сайта.</p>
                 </div>
                 </div>
-                <div class="col-2 footer_img_block">
+                <div class="d-flex col-3 footer_img_block">
                     <a href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
                     <a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
                     <a href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
