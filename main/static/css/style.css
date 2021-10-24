@@ -21,6 +21,8 @@ header{
 	position: absolute;
 }
 footer{
+    padding-top: 20px;
+    background: #EAEAEA;
     height: 130px;
 }
 ul li{
@@ -370,25 +372,64 @@ footer{
         }
                                         /*About and Gavernment*/
 .about_content, .gavernment_content{
-    margin-top: 160px;
+    margin-top: 20px;
     color: #101F4F;
 }
+.about_left_bar_block{
+    margin-top: 20px;
+}
+    .about_left_bar_block p{
+        color: rgba(16, 31, 79, 0.5);
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        padding: 70px 30px;
+        border: 4px solid #B18AFF;
+        box-sizing: border-box;
+        border-radius: 42.0409px;
+    }
 .about_content h1, .gavernment_content h1{
     font-family: Montserrat;
-    font-style: normal;
     font-weight: 600;
     font-size: 64px;
-    line-height: 102px;
 }
 .about_content p, .gavernment_content p{
     font-family: Montserrat;
-    font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 24px;
 }
-
-
+.about_content img:last-child{
+    display: flex;
+    justify-content: center;
+}
+.government_block{
+    border: 4px solid #B18AFF;
+    box-sizing: border-box;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 40px auto;
+}
+    .government_block p{
+        font-size: 36px;
+        font-weight: 600;
+        color: rgba(16, 31, 79, 0.5);
+    }
+.government_a{
+    margin: 40px 0;
+}
+.government_a a{
+   font-size: 32px;
+   color: white;
+   background-color: #B18AFF;
+   padding: 5px 55px 7px 55px;
+   border-radius: 33px;
+   font-weight: 500;
+}
+.government_a a:hover{
+    background-color: #190033;
+}
 
 
 
