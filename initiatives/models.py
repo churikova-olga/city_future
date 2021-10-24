@@ -25,12 +25,17 @@ class Comment(models.Model):
     initiative_comment = models.ForeignKey(Initiative, on_delete=models.CASCADE)
     user_comment = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     # administration_comment = models.ForeignKey(AdministrationProfile, on_delete=models.CASCADE, blank=True, null=True)
-    date_comment = models.DateTimeField('PublicationDate')
+    pub_date = models.DateTimeField('PublicationDate')
     message_comment = models.TextField('Message')
+
+    def save(self, *args, **kwargs):
+        self.pub_date = timezone.now()
+        return super(Comment, self).save(*args, **kwargs)
 
 class RatingInitiative(models.Model):
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     initiative = models.ForeignKey(Initiative, on_delete=models.CASCADE)
+
 
 
 
