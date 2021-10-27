@@ -21,7 +21,6 @@ header{
 	position: absolute;
 }
 footer{
-    padding-top: 20px;
     background: #EAEAEA;
     height: 130px;
 }
@@ -41,10 +40,11 @@ ul li{
 	background-color: #B18AFF;
     border-radius: 20px;
 }
+.logo_block{
+    margin-right: 100px;
+}
 .logo{
-	float: left;
 	padding-top: 10px;
-	padding-left: 20px;
 }
 .logo img{
     height: 94px;
@@ -430,6 +430,20 @@ footer{
 .government_a a:hover{
     background-color: #190033;
 }
+                                            /*Entrance*/
+.header_reg{
+
+}
+.active_user{
+
+}
+.registration_user{
+
+}
+.entrance{
+    margin-top: 160px;
+}
+
 
 
 

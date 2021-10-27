@@ -34,3 +34,19 @@ def faq(request):
     return render(request, 'main/faq.html')
 
 
+def entrance_administration(request):
+    return render(request, 'main/entrance_administration.html')
+
+
+def entrance_user(request):
+    return render(request, 'main/entrance_user.html')
+
+
+def registration_user(request):
+    return render(request, 'main/registration_user.html')
+
+
+def registration_administration(request):
+    return render(request, 'main/registration_administration.html')
+
+
