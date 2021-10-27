@@ -6,44 +6,47 @@
 {% endblock %}
 
 {% block header %}
-<p>Уже зарегистрированы?</p>
-<a href="">Войти</a>
+<li><p>Нет аккаунта?</p></li>
+<li><a href="registration_user">Регистрация</a></li>
 {% endblock %}
 
 {% block content %}
 <main>
-    <section class="container">
-        <div class="entrance">
-            <h1>Вход в сервис</h1>
-            <div class="">
-                <div >
-                    <a href="registration_user active_user">Пользователь</a>
-                </div>
-                <div>
-                    <a href="registration_administration">Администратор</a>
-                </div>
+    <div class="entrance col-3">
+        <h1 class="col-12">Вход в сервис</h1>
+        <div class="col-12">
+            <div class="col-6 registration_user">
+                <a id="active_user" href="entrance_user">Пользователь</a>
             </div>
-            <form action="" method="post">
-                <label class="label" for="login">Логин</label>
-                <input type="text" name="login" id="login">
-                <label class="label" for="password">Пароль</label>
-                <label for="password" class="label_left">Забыли пароль</label>
-                <input type="text" name="password" id="password">
-
-                <input type="submit" id="submit">
-
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox">Запомнить меня</label>
-            </form>
-            <div class="another_entrance">
-                <h6>Войти через социальные сети</h6>
-                <div class="col-12 soc_seti">
-                    <a href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
-                    <a href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
-                    <a href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
-                </div>
+            <div class="col-6 registration_user">
+                <a href="registration_user">Администратор</a>
             </div>
         </div>
-    </section>
+        <div class="form_enter">
+            <form action="" method="post" class=" col-12">
+            <label class="label col-12" for="login">Логин</label>
+            <input class="col-12  input1" type="text" name="login" id="login">
+            <label class="label col-6" for="password">Пароль</label>
+            <label for="password" class="label_left col-6">Забыли пароль</label>
+            <input class="col-12 input1" type="text" name="password" id="password">
+
+            <input class="col-12 submit_btn" type="submit" id="submit" value="Войти">
+
+
+            <div class="col-12 checkbox">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Запомнить меня</label>
+            </div>
+        </form>
+        </div>
+        <div class="another_entrance col-12">
+            <h6 class="col-12">Войти через социальные сети</h6>
+            <div class="col-12 soc_seti">
+                <a class="col-4" href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
 </main>
 {% endblock %}

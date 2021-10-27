@@ -431,17 +431,133 @@ footer{
     background-color: #190033;
 }
                                             /*Entrance*/
-.header_reg{
-
+.top_menu{
+	height: 160px;
 }
-.active_user{
+.menu_reg{
+	list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    text-align: right;
+}
+.menu_reg li{
+    display: inline-block;
+    margin-top: 35px;
+    padding-right: 50px;
+}
+.menu_reg p{
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 25px;
+	color: #101F4F;
+}
+.top_menu img{
+	padding-left: 100px;
+}
+.menu_reg a{
+	font-weight: 600;
+	font-size: 21px;
+	line-height: 25px;
+	color: #101F4F;
+}
+.logo{
+	padding-top: 10px;
+}
+.entrance{
+	display: block;
+	margin-left: auto;
+    margin-right: auto
+}
+.entrance h1{
+	text-align: center;
+	font-weight: 600;
+	font-size: 60px;
+	color: #101F4F;
+	margin-bottom: 40px;
+}
+#active_user{
+	background-color: #B18AFF;
+	border-radius: 50px;
+	border: 1px solid #B18AFF;
+	padding: 10px 30px 10px 30px;
+	color: white;
+}
+.registration_user a{
+	font-weight: normal;
+	font-size: 22px;
+	color: #101F4F;
+	line-height: 40px;
 
 }
 .registration_user{
-
+	display: inline-block;
+	float: left;
+	text-align: center;
+	padding-bottom: 20px;
 }
-.entrance{
-    margin-top: 160px;
+.form_enter{
+	margin-top: 100px;
+}
+.label{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	color: #000000;
+	float: left;
+}
+.label_left{
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: right;
+	color: #101F4F;
+	cursor: pointer;
+}
+.input1{
+	margin-bottom: 20px;
+	line-height: 25px;
+	font-size: 20px;
+	border: 2px solid black;
+}
+.submit_btn{
+	margin-top: 30px;
+	background: #B18AFF;
+	border-radius: 100px;
+	color: white;
+	border: none;
+	height: 60px;
+	font-size: 32px;
+	font-weight: 600;
+}
+.checkbox{
+	margin-top: 40px;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	color: #101F4F;
+}
+.another_entrance h6{
+	margin-top: 100px;
+	text-align: center;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	color: #101F4F;
+	margin-bottom: 30px;
+}
+.soc_seti{
+	display: flex;
+	justify-content: center;
+}
+.soc_seti img{
+	height: 80px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+
 }
 
 

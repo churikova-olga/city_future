@@ -21,12 +21,12 @@
 </head>
 <body>
     <header>
-        <div class=container">
-            <div class="col-sm-1"></div>
-            <div class="logo_block">
-                <a class="logo href="/"><img  src="{% static 'img/logo_dark.png' %}"></a>
-            </div>
-        </div>
+        <nav class="top_menu col-12">
+            <a href="/"><img class="logo" src="{% static 'img/logo_dark.png' %}"></a>
+            <ul class="menu_reg col-8">
+                {% block header %}{% endblock %}
+            </ul>
+        </nav>
     </header>
 
     {% block content %}{% endblock %}
