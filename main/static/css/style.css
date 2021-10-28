@@ -184,7 +184,7 @@ ul li{
 }
                                         /*Footer*/
 footer{
-    margin-top: 20px;
+    padding-top: 20px;
 }
 .footer_block_img_left img{
     height: 95px;
@@ -433,6 +433,7 @@ footer{
                                             /*Entrance*/
 .top_menu{
 	height: 160px;
+
 }
 .menu_reg{
 	list-style: none;
@@ -467,7 +468,7 @@ footer{
 .entrance{
 	display: block;
 	margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 .entrance h1{
 	text-align: center;
@@ -557,7 +558,62 @@ footer{
 	display: block;
     margin-left: auto;
     margin-right: auto
-
+}
+                                            /*Registration*/
+.registration{
+	display: block;
+	margin-left: auto;
+    margin-right: auto
+}
+.registration h1{
+	font-weight: 600;
+	font-size: 72px;
+	line-height: 100px;
+	text-align: center;
+	color: #101F4F;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.another_entrance_reg h6{
+	text-align: center;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	color: #101F4F;
+	margin-bottom: 30px;
+}
+#tel{
+	margin-bottom: 80px;
+}
+#password_rep{
+	margin-bottom: 40px;
+}
+.checkbox_reg{
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #101F4F;
+}
+.submit_btn_reg{
+	margin-top: 30px;
+	background: #B18AFF;
+	border-radius: 100px;
+	color: white;
+	border: none;
+	height: 60px;
+	font-size: 32px;
+	font-weight: 600;
+}
+.form_reg{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+#adres_org{
+	margin-bottom: 80px;
+}
+.label_check{
+    font-size: 15px;
 }
 
 

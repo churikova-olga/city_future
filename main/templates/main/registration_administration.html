@@ -5,6 +5,83 @@
     Регистрация
 {% endblock %}
 
-{% block content %}
+{% block header %}
+<li><p>Уже зарегистрированы?</p></li>
+<li><a href="entrance_administration">Войти</a></li>
+{% endblock %}
 
+{% block content %}
+<main>
+    <div class="registration col-3">
+        <div class="another_entrance_reg col-12">
+            <h6 class="col-12">Зарегистрироваться через социальные сети</h6>
+            <div class="col-12 soc_seti">
+                <a class="col-4" href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
+            </div>
+        </div>
+        <h1 class="col-12">Регистрация</h1>
+        <div class="col-12">
+            <div class="col-6 registration_user">
+                <a  href="registration_user">Пользователь</a>
+            </div>
+            <div class="col-6 registration_user">
+                <a id="active_user" href="registration_administration">Администрация</a>
+            </div>
+        </div>
+        <div class="form_reg">
+            <form action="" method="post" class=" col-12">
+            <label class="label col-12" for="name">Имя</label>
+            <input class="col-12  input1" type="text" name="name" id="name">
+
+            <label class="label col-12" for="surname">Фамилия</label>
+            <input class="col-12 input1" type="text" name="surname" id="surname">
+
+            <label class="label col-12" for="otchestvo">Отчество (при наличии)</label>
+            <input class="col-12 input1" type="text" name="otchestvo" id="otchestvo">
+
+            <label class="label col-12" for="city">Город</label>
+            <input class="col-12 input1" type="text" name="city" id="city">
+
+            <label class="label col-12" for="tel">Номер телефона</label>
+            <input class="col-12 input1" type="text" name="tel" id="tel">
+
+            <label class="label col-12" for="name_org">Название организации</label>
+            <input class="col-12 input1" type="text" name="name_org" id="name_org">
+
+
+            <label class="label col-12" for="adres_org">Адрес организации</label>
+            <input class="col-12 input1" type="text" name="adres_org" id="adres_org">
+
+
+            <label class="label col-12" for="mail">Электронная почта</label>
+            <input class="col-12 input1" type="text" name="mail" id="mail">
+
+            <label class="label col-12" for="password">Пароль</label>
+            <input class="col-12 input1" type="text" name="password" id="password">
+
+            <label class="label col-12" for="password_rep">Повтор пароля</label>
+            <input class="col-12 input1" type="text" name="password_rep" id="password_rep">
+
+            <div class="col-12 checkbox_reg">
+                <input type="checkbox" id="checkbox1">
+                <label class="label_check" for="checkbox1">Даю согласие на обработку персональных данных</label>
+            </div>
+            <div class="col-12 checkbox_reg">
+                <input type="checkbox" id="checkbox2">
+                <label class="label_check" for="checkbox2">Соглашаюсь принять участие в экспериментах</label>
+            </div>
+
+
+
+            <input class="col-12 submit_btn_reg" type="submit" id="submit" value="Зареситрироваться">
+
+
+
+        </form>
+        </div>
+
+    </div>
+</main>
 {% endblock %}
