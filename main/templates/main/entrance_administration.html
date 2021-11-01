@@ -7,7 +7,7 @@
 
 {% block header %}
 <li><p>Нет аккаунта?</p></li>
-<li><a href="registration_administration">Регистрация</a></li>
+<li><a href="{%url 'users:registration_administration'%}">Регистрация</a></li>
 {% endblock %}
 
 {% block content %}
@@ -16,19 +16,23 @@
         <h1 class="col-12">Вход в сервис</h1>
         <div class="col-12">
             <div class="col-6 registration_user">
-                <a  href="entrance_user">Пользователь</a>
+                <a  href="{%url 'users:entrance_user'%}">Пользователь</a>
             </div>
             <div class="col-6 registration_user">
-                <a id="active_user" href="entrance_administration">Администрация</a>
+                <a id="active_user" href="{%url 'users:entrance_administration'%}">Администрация</a>
             </div>
         </div>
         <div class="form_enter">
-            <form action="" method="post" class=" col-12">
-            <label class="label col-12" for="login">Логин</label>
-            <input class="col-12  input1" type="text" name="login" id="login">
-            <label class="label col-6" for="password">Пароль</label>
+            <form action="{%url 'users:entrance_administration'%}" method="post" class=" col-12">
+
+                {% csrf_token %}
+
+            <label class="label col-12" for="{{form.username.id_for_label}}">Логин</label>
+            {{form.username}}
+
+            <label class="label col-6" for="{{form.password.id_for_label}}">Пароль</label>
             <label for="password" class="label_left col-6">Забыли пароль</label>
-            <input class="col-12 input1" type="text" name="password" id="password">
+            {{form.password}}
 
             <input class="col-12 submit_btn" type="submit" id="submit" value="Войти">
 

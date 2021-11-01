@@ -22,7 +22,7 @@ import users
 
 urlpatterns = [
     path('', include('initiatives.urls')),
-    path('users/', include('users.urls')),
+    path('', include('users.urls')),
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('statistics/', include('administrations.urls'))
