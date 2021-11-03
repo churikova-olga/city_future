@@ -49,7 +49,6 @@ ul li{
 .logo img{
     height: 94px;
 }
-
 .menu_a a{
 	color: white !important;
 	text-decoration: none;
@@ -65,7 +64,7 @@ ul li{
 }
 .header_bg{
     height: 140px;
-    background-color: #190033;
+    background: #24064D;
 }
                                             /*Banner*/
 .main_text p{
@@ -156,17 +155,27 @@ ul li{
 }
                                      /*Search*/
 .search_bg{
-    background-color: #1B063E;
+    background: #24064D;
 }
-.title_search{
-
+.title_search form{
+    height: 55px;
 }
-.title_search p{
+.title_search h1{
     color: white;
-    margin-top: 20px;
     font-size: 64px;
     font-weight: 500;
-    padding: 30px 0;
+    padding: 30px 140px;
+}
+.title_search h1 span{
+    color: #B18AFF;
+}
+.title_search p{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 100%;
+    color: white;
+    padding: 30px 140px;
+    margin: 0 !important;
 }
 .title_search img{
     width: 220px;
@@ -175,12 +184,97 @@ ul li{
 .search_ul li{
     display: inline-block;
 }
-.graph{
-    float:left;
+.left_bar1{
+	background: #24064D;
+	padding-right: 80px;
+	float: left;
+}
+.left_bar1 h1{
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 100%;
+	padding-top: 45px;
+	color: white;
+	text-align: center;
+}
+.form_category button{
+	display: block;
+	background-color: #24064D;
+    border: none;
+    color: #E5E5E5;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 200px;
+}
+.form_category button:hover{
+	background: #B18AFF;
+	border-radius: 35px;
+}
+.form_category_bnt{
+	margin-left: auto;
+    margin-right: auto;
+}
+.form_category_bnt div{
+	width: 200px;
+	margin-top: 15px;
+}
+.form_status label{
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 100%;
+	color: #FFFFFF;
+}
+.form_status{
+	padding-bottom: 80px;
+}
+.graph_content{
+	float: left;
+	height: 100%;
+	padding: 0;
+}
+.search_button{
+    padding-top: 5px;
+}
+.select_city{
+	cursor: pointer;
+	float: right;
+	padding-right: 100px;
+	padding-top: 40px;
+
 }
 .graph img{
    width: 1080px;
    height:730px;
+}
+.serch_int{
+	padding: 30px 140px;
+}
+.serch_int input{
+	border-radius: 30px 0px 0px 30px;
+	height: 55px;
+	border: none;
+	font-size: 18px;
+	color: black;
+	padding-left: 15px;
+}
+.serch_int button{
+	border-radius: 0px 30px 30px 0px;
+	width: 60px;
+	height: 55px;
+	margin-left: -4px;
+	border: none;
+	background: white;
+	padding-bottom: 17px;
+	text-decoration: none;
+}
+.serch_int img{
+	width: 45px;
+	height: 30px;
+	padding-right: 10px;
+	padding-top: 10px;
 }
                                         /*Footer*/
 footer{
@@ -220,28 +314,8 @@ footer{
     border-radius: 20px;
 }
                                             /*Search_page*/
-.serch_int input{
-    padding: 5px 20px;
-    border-radius: 10px 0 0 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid grey;
-    color: white !important;
-    text-align: left !important;
-}
-.serch_int{
-    float: left;
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-}
-.serch_int a{
-     border-radius: 0px 10px 10px 0px;
-     border: 1px solid grey;
-     background-color: white;
-     padding: 10px;
-     margin-top: 1px;
-}
+
+
 .category_title p{
     font-size: 30px;
     text-align:center;
@@ -432,8 +506,7 @@ footer{
 }
                                             /*Entrance*/
 .top_menu{
-	height: 160px;
-
+	height: 100px;
 }
 .menu_reg{
 	list-style: none;
@@ -468,12 +541,12 @@ footer{
 .entrance{
 	display: block;
 	margin-left: auto;
-    margin-right: auto;
+    margin-right: auto
 }
 .entrance h1{
 	text-align: center;
 	font-weight: 600;
-	font-size: 60px;
+	font-size: 48px;
 	color: #101F4F;
 	margin-bottom: 40px;
 }
@@ -488,8 +561,6 @@ footer{
 	font-weight: normal;
 	font-size: 22px;
 	color: #101F4F;
-	line-height: 40px;
-
 }
 .registration_user{
 	display: inline-block;
@@ -498,19 +569,19 @@ footer{
 	padding-bottom: 20px;
 }
 .form_enter{
-	margin-top: 100px;
+	margin-top: 40px;
 }
 .label{
 	font-style: normal;
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 20px;
 	color: #000000;
 	float: left;
 }
 .label_left{
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 22px;
 	text-align: right;
 	color: #101F4F;
@@ -518,9 +589,9 @@ footer{
 }
 .input1{
 	margin-bottom: 20px;
-	line-height: 25px;
-	font-size: 20px;
+	font-size: 22px;
 	border: 2px solid black;
+	border-radius: 10px;
 }
 .submit_btn{
 	margin-top: 30px;
@@ -533,14 +604,13 @@ footer{
 	font-weight: 600;
 }
 .checkbox{
-	margin-top: 40px;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 22px;
 	color: #101F4F;
 }
 .another_entrance h6{
-	margin-top: 100px;
+	margin-top: 20px;
 	text-align: center;
 	font-weight: normal;
 	font-size: 18px;
@@ -554,12 +624,12 @@ footer{
 	justify-content: center;
 }
 .soc_seti img{
-	height: 80px;
+	height: 50px;
 	display: block;
     margin-left: auto;
     margin-right: auto
 }
-                                            /*Registration*/
+/*Регистрация*/
 .registration{
 	display: block;
 	margin-left: auto;
@@ -567,12 +637,11 @@ footer{
 }
 .registration h1{
 	font-weight: 600;
-	font-size: 72px;
-	line-height: 100px;
+	font-size: 64px;
 	text-align: center;
 	color: #101F4F;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .another_entrance_reg h6{
 	text-align: center;
@@ -591,7 +660,7 @@ footer{
 }
 .checkbox_reg{
 	font-weight: normal;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 22px;
 	color: #101F4F;
 }
@@ -602,11 +671,11 @@ footer{
 	color: white;
 	border: none;
 	height: 60px;
-	font-size: 32px;
+	font-size: 24px;
 	font-weight: 600;
 }
 .form_reg{
-	margin-top: 100px;
+	margin-top: 40px;
 	margin-bottom: 100px;
 }
 #adres_org{
@@ -615,10 +684,3 @@ footer{
 .label_check{
     font-size: 15px;
 }
-
-
-
-
-
-
-

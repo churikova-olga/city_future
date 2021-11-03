@@ -7,59 +7,61 @@
 
 {% block content %}
     <main>
-        <section>
-            <div class="header_bg"></div>
-            <div class="container-fluid">
-               <div class="row">
-                    <div class="search_bg">
-                        <div class="title_search container">
-                            <ul class="search_ul">
-                                <li class="col-9"><p>Найти свою инициативу</p></li>
-                                <li class="col-2"><img src="{% static 'img/select_town.svg' %}" alt=""></li>
-                            </ul>
-                        </div>
-                    </div>
-               </div>
+        <div class="header_bg"></div>
+        <div class="search_bg">
+            <div class="title_search">
+                <h1>Найти свою <span>инициативу</span></h1>
+                <p>Алгоритмы умного поиска, графы и все такое - попробуй сам!</p>
+                <div class="col-12 serch_int search_bg">
+                    <form class="" method="post" action="">
+                        <input class="col-5" type="search" placeholder="Поиск инициативы">
+                        <button><img src="{% static 'img/lupa.svg' %}" alt=""></button>
+                    </form>
+                </div>
             </div>
-      </section>
-        <section class="container-fluid">
-          <div class="row">
-              <div class="search_content">
-              <div class="leftbar col-3">
-                  <div class="serch_int col-12">
-                      <input class="col-8 btn" type="text" placeholder="Поиск">
-                      <div class="serch_img col-2">
-                          <a href="" type="submit">
-                              <img  src="{% static 'img/search_img111.svg' %}" alt="">
-                          </a>
-                      </div>
-                  </div>
-                  <div class="category col-12">
-                      <div class="category_title col-12">
-                          <p>Категории</p>
-                      </div>
-                      <div class="category_ul_block">
-                          <ul class="category_ul">
-                              <li><a href="">Здравохранение</a></li>
-                              <li><a href="">Дом и двор</a></li>
-                              <li><a href="">Окружающая среда</a></li>
-                              <li><a href="">Пушистые друзья</a></li>
-                              <li><a href="">Образование</a></li>
-                              <li><a href="">Культурное наледие</a></li>
-                              <li><a href="">Экономика</a></li>
-                          </ul>
-                      </div>
-                      <!--
-                      <form action="" method="post">
-                          <input type="radio" value="Создана">
-                          <input type="radio" value="Принята">
-                          <input type="radio" value="На рассмотрении">
-                          <input type="radio" value="Отклонена">
-                      </form>
-                      -->
-                  </div>
-              </div>
-              <div class="graph col-9">
+        </div>
+        <div class="search_content col-12">
+        	<div class="left_bar1 col-3">
+        		<div class="form_category_bnt col-3">
+        			<h1>Категории</h1>
+        		</div>
+        		<form class="form_category " method="post" action="">
+        			<div class="form_category_bnt col-4">
+        				<button type="submit" value="1">Здравохранение</button>
+        				<button type="submit" value="2">Дом и двор</button>
+        				<button type="submit" value="3">Окружающая среда</button>
+        				<button type="submit" value="4">Пушистые друзья</button>
+        				<button type="submit" value="5">Образование</button>
+        				<button id="culture" type="submit" value="6">Культурное наследие</button>
+        				<button type="submit" value="7">Экономика</button>
+        			</div>
+        		</form>
+        		<div class="form_category_bnt col-2">
+        			<h1>Статус</h1>
+        		</div>
+        		<form class="form_status" method="post" action="">
+        			<div class="form_category_bnt col-2">
+	        			<div class="">
+	        				<input type="radio" name="status" id="established" value="established">
+	        				<label for="established">Создана</label>
+	        			</div>
+	        			<div>
+	        				<input type="radio" name="status" id="accepted" value="accepted">
+	        				<label for="accepted">Принята</label>
+	        			</div>
+	        			<div>
+	        				<input type="radio" name="status" id="consideration" value="consideration">
+	        				<label for="consideration">На рассмотрении</label>
+	        			</div>
+	        			<div>
+	        				<input type="radio" name="status" id="rejected" value="rejected">
+	        				<label for="rejected">Отклонена</label>
+	        			</div>
+	        		</div>
+        		</form>
+	        </div>
+	        <div class="graph_content col-9">
+	        	<div class="graph">
                  <div id = "mynetwork"></div>
                     <div id="loadingBar">
                         <div class="outerBorder">
@@ -70,7 +72,6 @@
                         </div>
                     </div>
         <script type="text/javascript">
-
         // initialize global variables.
         var edges;
         var nodes;
@@ -78,12 +79,9 @@
         var container;
         var options, data;
 
-
         // This method is responsible for drawing the graph, returns the drawn network
         function drawGraph() {
             var container = document.getElementById('mynetwork');
-
-
 
             // parsing and collecting nodes and edges from the python
             nodes = new vis.DataSet({{ nodes|safe }});
@@ -129,15 +127,7 @@
         }
         };
 
-
-
-
-
             network = new vis.Network(container, data, options);
-
-
-
-
 
             network.on("stabilizationProgress", function(params) {
                 document.getElementById('loadingBar').removeAttribute("style");
@@ -164,10 +154,14 @@
 
         drawGraph();
 
-        </script>
-                    </div>
-              </div>
-          </div>
-      </section>
-    </main>
+        		</script>
+			</div>
+		</div>
+	</div>
+			<!--
+	        	<div class="select_city col-3">
+	        		<img src="{% static 'img/select_city.png' %}">
+	        	</div>
+			-->
+</main>
 {% endblock %}
