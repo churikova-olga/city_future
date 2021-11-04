@@ -7,35 +7,38 @@
 
 {% block header %}
 <li><p>Нет аккаунта?</p></li>
-<li><a href="registration_user">Регистрация</a></li>
+<li><a href="{%url 'users:registration_user'%}">Регистрация</a></li>
 {% endblock %}
 
 {% block content %}
 <main>
-    <div class="entrance col-4">
+    <div class="entrance col-3">
         <h1 class="col-12">Вход в сервис</h1>
         <div class="col-12">
             <div class="col-6 registration_user">
-                <a id="active_user" href="entrance_user">Пользователь</a>
+                <a id="active_user" href="{%url 'users:entrance_user'%}">Пользователь</a>
             </div>
             <div class="col-6 registration_user">
-                <a href="entrance_administration">Администрация</a>
+                <a href="{%url 'users:entrance_administration'%}">Администрация</a>
             </div>
         </div>
         <div class="form_enter">
-            <form action="" method="post" class=" col-12">
-            <label class="label col-12" for="login">Логин</label>
-            <input class="col-12  input1" type="text" name="login" id="login">
-            <label class="label col-6" for="password">Пароль</label>
-            <label for="password" class="label_left col-6">Забыли пароль</label>
-            <input class="col-12 input1" type="text" name="password" id="password">
+            <form action="{%url 'users:entrance_user'%}" method="post" class=" col-12">
+                {% csrf_token %}
+            <label class="label col-12" for="{{form.username.id_for_label}}">Логин</label>
+            {{form.username}}
 
-             <div class="col-12 checkbox">
+            <label class="label col-6" for="{{form.password.id_for_label}}">Пароль</label>
+            <label for="password" class="label_left col-6">Забыли пароль</label>
+
+            {{form.password}}
+
+            <input class="col-12 submit_btn" type="submit" id="submit" value="Войти">
+
+            <div class="col-12 checkbox">
                 <input type="checkbox" id="checkbox">
                 <label for="checkbox">Запомнить меня</label>
             </div>
-
-            <input class="col-12 submit_btn" type="submit" id="submit" value="Войти">
         </form>
         </div>
         <div class="another_entrance col-12">
