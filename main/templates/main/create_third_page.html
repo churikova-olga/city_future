@@ -1,0 +1,53 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block title %}
+    Создать инициативу шаг 3
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="header_bg"></div>
+    <div class="create_ini">
+        <h1>Выберите местоположение</h1>
+      <p>
+        В результате удачно подобранного названия, бренд станет более известным, его начнут узнавать, о нем будут рассказывать своим друзьям.
+        Целостная концепция бренда вызовет доверие у потребителей, что сделает ваше предложение актуальным и интересным для каждого потенциального клиента.
+      </p>
+      <form action="initiative" method="get">
+        <label for="create_obl">Регион</label>
+        <div>
+            <input class="col-6" id="create_obl"  type="text" placeholder="Московская область">
+        </div>
+
+        <label for="create_city">Город</label>
+        <div>
+            <input class="col-6" id="create_city" type="text" placeholder="Москва">
+        </div>
+
+        <label for="create_adres">Адрес</label>
+        <div>
+            <input class="col-3" id="create_adres" type="text" placeholder="Адрес">
+            <input class="col-1" id="create_adres" type="text" placeholder="дом">
+            <input class="col-1" id="create_adres" type="text" placeholder="кв">
+        </div>
+        <div>
+          <h2>На карте</h2>
+          <p>Также вы можете отобразить расположение инициативы на общей карте</p>
+          <div class="map">
+              <img src="{% static 'img/maket_map.png' %}" alt="">
+          </div>
+        </div>
+        <div>
+             <input id="create_btn" type="submit" value="Завершить">
+         </div>
+      </form>
+      <h6>Правила заполнения инициатив</h6>
+         <h1>Рекомендации</h1>
+         <ol>
+             <li><p>Такое название максимально простое и понятное каждому покупателю. Здесь используются слова, которые ассоциируются со сферой деятельности компании.</p></li>
+             <li><p>Такое название максимально простое и понятное каждому покупателю. Здесь используются слова, которые ассоциируются со сферой деятельности компании.</p></li>
+         </ol>
+    </div>
+</main>
+{% endblock %}

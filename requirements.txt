@@ -7,3 +7,4 @@ contractions==0.0.18
 nltk
 pandas
 django-crispy-forms==1.12.0
+django-static-jquery==2.1.4

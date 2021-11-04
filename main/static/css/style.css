@@ -352,98 +352,162 @@ footer{
     float: left;
 }
                                         /*Create*/
-.creator{
-    min-height: 600px;
+.create_ini {
+    padding-left: 140px;
 }
-.create_title{
-    text-align: center;
-    padding: 10px;
+.create_ini h1{
+    font-weight: 600;
+    font-size: 48px;
+    color: #101F4F;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
-.form_block{
-    margin: 30px auto;
+.create_ini span{
+    color: #B18AFF;
 }
-.create_img{
-    float: left;
-    margin-right: 30px;
+.create_ini p{
+    font-weight: normal;
+    font-size: 18px;
+    color: #101F4F;
+    padding: 0;
+    padding-bottom: 30px;
 }
-.create_img img{
-    border-radius: 50%;
-    margin-top: 30px;
+.create_ini h6{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #101F4F;
+}
+#project_name{
+    margin-bottom: 40px;
+}
+.create_ini input{
+    border: 2px solid #101F4F;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.create_ini label{
+    font-weight: 600;
+    font-size: 18px;
+    color: #101F4F;
+    padding-bottom: 5px;
+}
+.create_ini textarea{
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 15px;
+}
+.create_ini select{
+    border: 2px solid #101F4F;
+    box-sizing: border-box;
+    border-radius: 100px;
+    color: #101F4F;
+    border-radius: 20px;
+    padding: 5px;
+}
+#create_btn{
+    background: #B18AFF;
+    border-radius: 33.8831px;
+    text-decoration: none;
+    padding: 20px 55px;
+    color: white;
+    border: none;
+    width: 260px;
+    font-weight: 600;
+    font-size: 32px;
+}
+#create_adres{
+    margin-left: 66px;
+}
+#secect_ini{
+    border: 2px solid #101F4F;
+    box-sizing: border-box;
+    border-radius: 100px;
 }
 .form_el a{
     margin-top: 40px;
 }
+.create_ini h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    color: #101F4F;
+}
+.create_ini img{
+    width: 850px;
+}
+.map{
+    width: 850px;
+}
 #mynetwork {
-            width: 100%;
-            height: 750px;
-            background-image: url("/main/static/img/map.svg");
-            float: left;
-        }
-        #loadingBar {
-            width: 100%;
-            height: 750px;
-            background-color:rgba(200,200,200,0.8);
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            -ms-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
-            opacity:1;
-        }
-
-        #bar {
-            position:absolute;
-            top:0px;
-            left:0px;
-            width:20px;
-            height:20px;
-            margin:auto auto auto auto;
-            border-radius:11px;
-            border:2px solid rgba(30,30,30,0.05);
-            background: rgb(0, 173, 246); /* Old browsers */
-            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
-        }
-
-        #border {
-            position:absolute;
-            top:10px;
-            left:10px;
-            width:500px;
-            height:23px;
-            margin:auto auto auto auto;
-            box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
-            border-radius:10px;
-        }
-
-        #text {
-            position:absolute;
-            top:8px;
-            left:530px;
-            width:30px;
-            height:50px;
-            margin:auto auto auto auto;
-            font-size:22px;
-            color: #000000;
-        }
-
-        div.outerBorder {
-            position:relative;
-            top:400px;
-            width:600px;
-            height:44px;
-            margin:auto auto auto auto;
-            border:8px solid rgba(0,0,0,0.1);
-            background: rgb(252,252,252); /* Old browsers */
-            background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
-            background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
-            border-radius:72px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        }
+    width: 100%;
+    height: 750px;
+    background-image: url("/main/static/img/map.svg");
+    float: left;
+}
+#loadingBar {
+    width: 100%;
+    height: 750px;
+    background-color:rgba(200,200,200,0.8);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity:1;
+}
+#bar {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:20px;
+    height:20px;
+    margin:auto auto auto auto;
+    border-radius:11px;
+    border:2px solid rgba(30,30,30,0.05);
+    background: rgb(0, 173, 246); /* Old browsers */
+    box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+}
+#border {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:500px;
+    height:23px;
+    margin:auto auto auto auto;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+    border-radius:10px;
+}
+#text {
+    position:absolute;
+    top:8px;
+    left:530px;
+    width:30px;
+    height:50px;
+    margin:auto auto auto auto;
+    font-size:22px;
+    color: #000000;
+}
+div.outerBorder {
+    position:relative;
+    top:400px;
+    width:600px;
+    height:44px;
+    margin:auto auto auto auto;
+    border:8px solid rgba(0,0,0,0.1);
+    background: rgb(252,252,252); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+    border-radius:72px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
                                         /*About and Gavernment*/
 .about_content, .gavernment_content{
     margin-top: 20px;

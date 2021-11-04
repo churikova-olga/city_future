@@ -40,8 +40,12 @@
                      </ul>
                  </div>
                 <div class="navbar-nav  menu_a">
-                    <a class="nav-link " href="entrance_user">Вход</a>
-                    <a class="nav-link " href="registration_user">Регистрация</a>
+                    {% if user.is_authenticated %}
+                        <a class="nav-link " href="{% url 'users:logout' %}">Выход</a>
+                    {%else%}
+                        <a class="nav-link " href="{%url 'users:entrance_user'%}">Вход</a>
+                        <a class="nav-link " href="{%url 'users:registration_user'%}">Регистрация</a>
+                    {%endif%}
                 </div>
             </div>
         </nav>
@@ -52,7 +56,7 @@
     <footer>
     <section class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-9">
                 <div class="footer_block">
                      <ul class="footer_ul">
                         <li class="footer_ul"><a href="">Обратная связь</a></li>
