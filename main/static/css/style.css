@@ -421,6 +421,9 @@ footer{
 #create_adres{
     margin-left: 66px;
 }
+#create_adres:first-child{
+    margin-left: 0;
+}
 #secect_ini{
     border: 2px solid #101F4F;
     box-sizing: border-box;
@@ -439,6 +442,9 @@ footer{
     width: 850px;
 }
 .map{
+    min-height: 500px;
+}
+.map img{
     width: 850px;
 }
 #mynetwork {
@@ -527,12 +533,10 @@ div.outerBorder {
         border-radius: 42.0409px;
     }
 .about_content h1, .gavernment_content h1{
-    font-family: Montserrat;
     font-weight: 600;
     font-size: 64px;
 }
 .about_content p, .gavernment_content p{
-    font-family: Montserrat;
     font-weight: normal;
     font-size: 24px;
 }
@@ -747,4 +751,18 @@ div.outerBorder {
 }
 .label_check{
     font-size: 15px;
+}
+                                        /*Initiative*/
+.initiative{
+    min-height: 700px;
+
+}
+.initiative h1{
+    text-align: center;
+    font-size: 48px;
+    color: #101F4F;
+}
+.initiative div{
+    display: table-cell;
+    vertical-align: middle;
 }

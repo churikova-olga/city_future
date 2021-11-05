@@ -31,23 +31,25 @@
             <input class="col-1" id="create_adres" type="text" placeholder="дом">
             <input class="col-1" id="create_adres" type="text" placeholder="кв">
         </div>
-        <div>
+        <div class="col-12 map">
           <h2>На карте</h2>
           <p>Также вы можете отобразить расположение инициативы на общей карте</p>
-          <div class="map">
+          <div class=" ">
               <img src="{% static 'img/maket_map.png' %}" alt="">
           </div>
         </div>
-        <div>
+        <div class="col-12 create_btn">
              <input id="create_btn" type="submit" value="Завершить">
          </div>
       </form>
-      <h6>Правила заполнения инициатив</h6>
+      <div class="col-12">
+          <h6>Правила заполнения инициатив</h6>
          <h1>Рекомендации</h1>
          <ol>
              <li><p>Такое название максимально простое и понятное каждому покупателю. Здесь используются слова, которые ассоциируются со сферой деятельности компании.</p></li>
              <li><p>Такое название максимально простое и понятное каждому покупателю. Здесь используются слова, которые ассоциируются со сферой деятельности компании.</p></li>
          </ol>
+      </div>
     </div>
 </main>
 {% endblock %}
