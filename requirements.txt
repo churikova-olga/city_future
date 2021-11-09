@@ -8,3 +8,5 @@ nltk
 pandas
 django-crispy-forms==1.12.0
 django-static-jquery==2.1.4
+django-cors-headers==3.10.0
+djangorestframework==3.12.4

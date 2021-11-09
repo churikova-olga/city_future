@@ -43,6 +43,7 @@ def entrance_user(request):
     context = {'form': form}
     return render(request, 'main/entrance_user.html', context)
 
+
 def entrance_administration(request):
     if request.method == "POST":
         form = UserLoginForm(data=request.POST)
@@ -58,6 +59,7 @@ def entrance_administration(request):
     context = {'form': form}
     return render(request, 'main/entrance_administration.html', context)
 
+
 def registration_user(request):
     if request.method == "POST":
         form = UserRegistrationForm(data=request.POST)
@@ -71,9 +73,9 @@ def registration_user(request):
             print(form.errors)
     else:
         form = UserRegistrationForm()
-
     context = {'form': form}
     return render(request, 'main/registration_user.html', context)
+
 
 def registration_administration(request):
     if request.method == "POST":
@@ -83,15 +85,14 @@ def registration_administration(request):
             rights_administrations = UserProfile.objects.get(username=request.POST["username"])
             rights_administrations.is_administration = True
             rights_administrations.save()
-
             return HttpResponseRedirect(reverse('entrance_administration'))
         else:
             print(form.errors)
     else:
         form = AdministrationRegistrationForm()
     context = {'form': form}
-
     return render(request, 'main/registration_administration.html', context)
+
 
 def logout(request):
     auth.logout(request)
