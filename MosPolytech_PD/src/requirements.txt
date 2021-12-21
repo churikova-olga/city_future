@@ -1,0 +1,12 @@
+asgiref==3.4.1
+Django==3.2.7
+pytz==2021.1
+sqlparse==0.4.2
+sklearn
+contractions==0.0.18
+nltk
+pandas
+django-crispy-forms==1.12.0
+django-static-jquery==2.1.4
+django-cors-headers==3.10.0
+djangorestframework==3.12.4

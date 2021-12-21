@@ -1,0 +1,104 @@
+{% extends 'main/headerREG.html' %}
+{% load static %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+{% block header %}
+<li><p>Уже зарегистрированы?</p></li>
+<li><a href="{%url 'users:entrance_administration'%}">Войти</a></li>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="registration col-3">
+        <div class="another_entrance_reg col-12">
+            <h6 class="col-12">Зарегистрироваться через социальные сети</h6>
+            <div class="col-12 soc_seti">
+                <a class="col-4" href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
+            </div>
+        </div>
+        <h1 class="col-12">Регистрация</h1>
+
+        <div class="col-12">
+            <div class="col-6 registration_user">
+                <a  href="{%url 'users:registration_user'%}">Пользователь</a>
+            </div>
+            <div class="col-6 registration_user">
+                <a id="active_user" href="{%url 'users:registration_administration'%}">Администрация</a>
+            </div>
+        </div>
+        <div class="form_reg">
+            <form action="{%url 'users:registration_administration'%}" method="post" class=" col-12">
+
+            {% csrf_token %}
+					<label class="label col-12" for="{{form.first_name.id_for_label}}">Имя</label>
+					{{form.first_name}}
+
+					<label class="label col-12" for="{{form.first_name.id_for_label}}">Фамилия</label>
+					{{form.last_name}}
+
+<!--					<label class="label col-12" for="otchestvo">Отчество (при наличии)</label>-->
+<!--					<input class="col-12 input1" type="text" name="otchestvo" id="otchestvo">-->
+
+					<label class="label col-12" for="{{form.username.id_for_label}}">Логин</label>
+					{{form.username}}
+
+
+                    <label class="label col-12" for="form.organization.id_for_label">Название организации</label>
+                    {{form.organization}}
+
+                    <label class="label col-12" for="form.city.id_for_label">Город</label>
+                    {{form.city}}
+
+					<label class="label col-12" for="{{form.address.id_for_label}}">Адрес организации</label>
+					{{form.address}}
+
+                    <label class="label col-12" for="{{form.role.id_for_label}}">Должность</label>
+					{{form.role}}
+
+					<label class="label col-12" for="{{form.mobile.id_for_label}}">Номер телефона</label>
+					{{form.mobile}}
+
+					<label class="label col-12" for="{{form.email.id_for_label}}">Электронная почта</label>
+					{{form.email}}
+
+					<label class="label col-12" for="{{form.password1.id_for_label}}">Пароль</label>
+					{{form.password1}}
+
+					<label class="label col-12" for="{{form.password2.id_for_label}}">Повтор пароля</label>
+					{{form.password2}}
+
+
+<!--            <label class="label col-12" for="otchestvo">Отчество (при наличии)</label>-->
+<!--            <input class="col-12 input1" type="text" name="otchestvo" id="otchestvo">-->
+
+
+<!--            <label class="label col-12" for="tel">Номер телефона</label>-->
+<!--            <input class="col-12 input1" type="text" name="tel" id="tel">-->
+
+
+            <div class="col-12 checkbox_reg">
+                <input type="checkbox" id="checkbox1">
+                <label class="label_check" for="checkbox1">Даю согласие на обработку персональных данных</label>
+            </div>
+            <div class="col-12 checkbox_reg">
+                <input type="checkbox" id="checkbox2">
+                <label class="label_check" for="checkbox2">Соглашаюсь принять участие в экспериментах</label>
+            </div>
+
+
+
+            <input class="col-12 submit_btn_reg" type="submit" id="submit" value="Зарегестрироваться">
+
+
+
+        </form>
+        </div>
+
+    </div>
+</main>
+{% endblock %}

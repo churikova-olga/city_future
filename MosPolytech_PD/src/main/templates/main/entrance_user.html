@@ -1,0 +1,54 @@
+{% extends 'main/headerREG.html' %}
+{% load static %}
+
+{% block title %}
+    Вход
+{% endblock %}
+
+{% block header %}
+<li><p>Нет аккаунта?</p></li>
+<li><a href="{%url 'users:registration_user'%}">Регистрация</a></li>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="entrance col-3">
+        <h1 class="col-12">Вход в сервис</h1>
+        <div class="col-12">
+            <div class="col-6 registration_user">
+                <a id="active_user" href="{%url 'users:entrance_user'%}">Пользователь</a>
+            </div>
+            <div class="col-6 registration_user">
+                <a href="{%url 'users:entrance_administration'%}">Администрация</a>
+            </div>
+        </div>
+        <div class="form_enter">
+            <form action="{%url 'users:entrance_user'%}" method="post" class=" col-12">
+                {% csrf_token %}
+            <label class="label col-12" for="{{form.username.id_for_label}}">Логин</label>
+            {{form.username}}
+
+            <label class="label col-6" for="{{form.password.id_for_label}}">Пароль</label>
+            <label for="password" class="label_left col-6">Забыли пароль</label>
+
+            {{form.password}}
+
+            <div class="col-12 checkbox">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Запомнить меня</label>
+            </div>
+
+            <input class="col-12 submit_btn" type="submit" id="submit" value="Войти">
+        </form>
+        </div>
+        <div class="another_entrance col-12">
+            <h6 class="col-12">Войти через социальные сети</h6>
+            <div class="col-12 soc_seti">
+                <a class="col-4" href=""><img src="{% static 'img/inst.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/facebook.svg' %}" alt=""></a>
+                <a class="col-4" href=""><img src="{% static 'img/twit.svg' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
