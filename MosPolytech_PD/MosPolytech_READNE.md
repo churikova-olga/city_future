@@ -7,6 +7,9 @@
 ### Ссылка на макеты страниц сайта: 
 https://www.figma.com/file/ShV2deDSmhTLEDHol1hsY7/Untitled?node-id=0%3A1
 
+### Ссылка на сайт проекта:
+http://future-city.std-1922.ist.mospolytech.ru/
+
 ###### Используемые языки:
 * Python 3.9
 * JavaScript
