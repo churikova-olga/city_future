@@ -14,8 +14,3 @@ MosPolytech_PD/src/media
 MosPolytech_PD/src/venv
 MosPolytech_PD/src/static
 MosPolytech_PD/src/.idea
-MosPolytech_PD/src/users/migrations/
-MosPolytech_PD/src/main/migrations/
-MosPolytech_PD/src/initiatives/migrations/
-MosPolytech_PD/src/graph/migrations/
-MosPolytech_PD/src/administrations/migrations/
